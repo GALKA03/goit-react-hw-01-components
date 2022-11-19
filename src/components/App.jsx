@@ -18,7 +18,6 @@ export const App = () => {
      
       <section style ={{
         width: 700,
-    height: 300,
     backgroundColor:"white",
     marginLeft: "auto",
     marginRight: "auto",
