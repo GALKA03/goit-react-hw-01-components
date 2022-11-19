@@ -10,19 +10,38 @@ import transactions from './startfile/transactions.json'
 export const App = () => {
  
   return (
-    <> 
+    <div style={{
+      backgroundColor: "rgb(207, 232, 232)",
+      border:"0.5 solid"
+      }}> 
         <Profile user={user} />
      
-      <section>
-        <Statistics  stats={data} />
+      <section style ={{
+        width: 700,
+    height: 300,
+    backgroundColor:"white",
+    marginLeft: "auto",
+    marginRight: "auto",
+      }}>
+        <Statistics variant="item"  stats={data} />
+        {/* <Statistics variant="red" ></Statistics>
+        <Statistics variant="violet" ></Statistics>
+        <Statistics variant="mediumslateblue" ></Statistics> */}
+        
       </section>
       
-      <ul>
+      <ul style={{
+        width: 200,
+    height: "auto",
+        marginLeft: "auto",
+        marginRight: "auto",
+      marginTop:60,
+      }}>
         <FriendList friends={friends} />; 
       </ul> 
       
         <TransactionHistory items={transactions} />;
     
-</>
+</div>
   );
 };

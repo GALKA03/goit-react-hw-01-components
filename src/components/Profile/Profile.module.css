@@ -1,0 +1,71 @@
+.userConteiner{
+   cursor: pointer;
+   width: 400px;
+   height: auto;
+  padding-top: 40px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: aliceblue;
+border: 0.5px solid rgb(169, 165, 165);
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+   position: relative;
+transition: box-shadow 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.userConteiner:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+   
+}
+.userConteinerTop{
+   text-align: center;
+
+   
+}
+.userAvatar{
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 50%;
+   background-color: rgb(207, 232, 232);
+}
+.userName{
+  font-size: 19px;
+  font-weight: 700;
+}
+.userTag{
+   font-size: 16px;
+   color: rgb(153, 157, 160);
+}
+.userLocation{
+   font-size: 17px;
+   font-weight: 600;
+   color:rgb(132, 137, 140);
+}
+.userList{
+   position: relative;
+   top: 16px;;
+  left: 2px;
+   margin-left: -41px;
+   width: 99%;
+   display: flex;
+   align-items: center;
+   justify-content:space-around;
+   border: 0.5px solid rgb(215, 228, 252);
+   
+   
+}
+.userItemText{
+   color:rgb(132, 137, 140) ;
+  font-weight: 400;
+}
+.userItem{
+background-color: rgb(216, 221, 224);
+   width: 100%;
+   padding-top: 20px;
+      padding-bottom: 20px;
+   display: block;
+text-align: center;
+font-size: 16px;
+font-weight: 700;
+}
+.userItem:not(:last-child) {
+   border-right: 0.5px solid rgb(207, 205, 205)};
+
