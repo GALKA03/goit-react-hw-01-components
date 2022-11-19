@@ -22,7 +22,7 @@ export const App = () => {
     marginLeft: "auto",
     marginRight: "auto",
       }}>
-        <Statistics variant="item"  stats={data} />
+        <Statistics title = "UPLOAD STATS" variant="item"  stats={data} />
         {/* <Statistics variant="red" ></Statistics>
         <Statistics variant="violet" ></Statistics>
         <Statistics variant="mediumslateblue" ></Statistics> */}
