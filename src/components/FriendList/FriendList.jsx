@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import style from './FriendList.module.css';
-export const FriendList = ({ friends, children }) => {   
+export const FriendList = ({ friends }) => {   
     return (
     <>
         {friends.map(({ id, avatar, name, isOnline ="off", children }) => {
@@ -11,8 +11,7 @@ export const FriendList = ({ friends, children }) => {
                     <img  className={style.img} src={avatar} alt="User avatar" width="48" />
                     <p>{name}</p>
                     {children}
-                </li>
-            )})}
+                </li> )})}
 </>
     )
 
