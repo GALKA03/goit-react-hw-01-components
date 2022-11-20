@@ -1,27 +1,29 @@
 import PropTypes from 'prop-types';
 import style from './FriendList.module.css';
-import { FriendListItem }   from './FriendsListItem/FriendsListItem.jsx';
+import { FriendListItem }   from '../FriendListItem/FriendListItem';
 
 export const FriendList = ({ friends, children }) => {
     return (
-            <FriendList className={style.list}>
-            {friends.map(({ id, isOnline, avatar, name })   =>( 
-                <FriendListItem
-                key={id}
-                isOnline = {isOnline}
-                avatar ={avatar}
-                name= {name}>
-            {children}
-                </FriendListItem>
-            ))}  
-    
-                </FriendList>
+        <ul className={style.list}> 
+             {friends.map(({ id, isOnline, avatar, name }) => (
+        <FriendListItem
+          key={id}
+          isOnline={isOnline}
+          avatar={avatar}
+          name={name}
+                 />
+                 
+      ))}
+               
+
+                </ul>
     )
 
 }
-FriendList.propTypes = {
-    friends:PropTypes.arrayOf()
-}
+// id, isOnline, avatar, name 
+// FriendList.propTypes = {
+//     friends:PropTypes.arrayOf()
+// }
 
 // import PropTypes from 'prop-types';
 // import style from './FriendList.module.css';
@@ -42,13 +44,21 @@ FriendList.propTypes = {
 //     )
 
 // }
-// FriendList.propTypes = {
-//     friends:PropTypes.arrayOf(
-//         PropTypes.shape({
-//         avatar: PropTypes.string,
-//         name: PropTypes.string,
-//         isOnline: PropTypes.bool,
-//         id:PropTypes.number
+FriendList.propTypes = {
+    friends:PropTypes.arrayOf(
+        PropTypes.shape({
+        avatar: PropTypes.string,
+        name: PropTypes.string,
+        isOnline: PropTypes.bool,
+        id:PropTypes.number
 
-//    }))
-// }
+   }))
+}
+// {friends.map((friend => (
+//              <FriendListItem
+//                     key={friend.id}
+//                     isOnline={friend.isOnline}
+//                     avatar={friend.avatar}
+//                     name={friend.name}
+                    
+//                 />

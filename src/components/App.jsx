@@ -7,7 +7,7 @@ import friends  from './startfile/friends.json';
 import user from './startfile/user.json';
 import data from './startfile/data.json';
 import transactions from './startfile/transactions.json'
-
+import styles from './Statistics/Statistics.module.css'
 export const App = () => {
  
   return (
@@ -16,21 +16,17 @@ export const App = () => {
       border:"0.5 solid"
       }}> 
         <Profile user={user} />
-     
-      <section >
+      <section className={styles.section}>
         <Statistics title="UPLOAD STATS" variant="item" stats={data} />
         {/* <Statistics variant="red" ></Statistics>
         <Statistics variant="violet" ></Statistics>
-        <Statistics variant="mediumslateblue" ></Statistics> */}
-        
+        <Statistics variant="mediumslateblue" ></Statistics> */} 
       </section>
       
-    
       <FriendList friends={friends} >
        <FriendListItem FriendListItem ={friends} />
         </FriendList>; 
      
-      
         <TransactionHistory items={transactions} />;
     
 </div>
