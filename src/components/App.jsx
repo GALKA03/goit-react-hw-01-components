@@ -1,6 +1,7 @@
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
+import { FriendListItem } from './FriendListItem/FriendListItem';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import friends  from './startfile/friends.json';
 import user from './startfile/user.json';
@@ -16,28 +17,19 @@ export const App = () => {
       }}> 
         <Profile user={user} />
      
-      <section style ={{
-        width: 700,
-    backgroundColor:"white",
-    marginLeft: "auto",
-    marginRight: "auto",
-      }}>
-        <Statistics title = "UPLOAD STATS" variant="item"  stats={data} />
+      <section >
+        <Statistics title="UPLOAD STATS" variant="item" stats={data} />
         {/* <Statistics variant="red" ></Statistics>
         <Statistics variant="violet" ></Statistics>
         <Statistics variant="mediumslateblue" ></Statistics> */}
         
       </section>
       
-      <ul style={{
-        width: 200,
-    height: "auto",
-        marginLeft: "auto",
-        marginRight: "auto",
-      marginTop:60,
-      }}>
-        <FriendList friends={friends} />; 
-      </ul> 
+    
+      <FriendList friends={friends} >
+       <FriendListItem FriendListItem ={friends} />
+        </FriendList>; 
+     
       
         <TransactionHistory items={transactions} />;
     

@@ -35,7 +35,7 @@ width: 100%;
  
 } 
 
-.blue{
+/* .blue{
 composes: item;
     background-color: rgb(12, 12, 124);
 }
@@ -50,7 +50,7 @@ composes: item;
 .mediumslateblue{
     composes:item;
     background-color: mediumslateblue;
-}
+} */
 /* .item:last-child {
     border-right: none
 } */ 
